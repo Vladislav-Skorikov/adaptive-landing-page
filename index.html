@@ -1,0 +1,1140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Train with Programming Challenges/Kata | Codewars</title>
+    <link rel="shortcut icon" href="Landing pics/ico/codewars (1).png" type="image/x-icon"/>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            line-height: 1.6em;
+        }
+
+        div {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            direction: ltr;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        p {
+            font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        header {
+            position: relative;
+            border-bottom: 2px solid #ebebeb;
+        }
+
+        .logo {
+            background: url('Landing pics/logo-codewars.png') no-repeat;
+            background-size: cover;
+            width: 174px;
+            height: 50px;
+            display: inline-block;
+            margin: 20px auto 10px;
+            margin-left: 30px;
+        }
+
+        .right_header {
+            font-size: 16px;
+            height: 1em;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            right: 10px;
+            z-index: 9;
+        }
+
+            .right_header a {
+                float: left;
+                color: #444444;
+                margin-right: 30px;
+            }
+
+        .first {
+            overflow: hidden;
+            position: relative;
+            display: block;
+        }
+
+
+        .paper {
+            transition: opacity 2s, ease-in;
+            background: url('Landing pics/bg paper.jpg');
+            height: 410px;
+            width: 100%;
+            position: absolute;
+            overflow: hidden;
+        }
+
+
+        .img-left {
+            background: url('Landing pics/painting-bg-left.png') no-repeat;
+            width: 366px;
+            height: 410px;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+        }
+
+        .img-right {
+            background: url('Landing pics/painting-bg-right.png') no-repeat bottom left;
+            width: 407px;
+            height: 410px;
+            right: 0px;
+            top: 0;
+            position: absolute;
+        }
+
+        .header-columns {
+            width: calc(100% - 742px);
+            margin-top: 7em;
+            text-align: center;
+            position: relative;
+        }
+
+        h1.achieve {
+            font-size: 40px;
+            line-height: 1.2;
+            font-weight: normal;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 0.4em;
+            font-family: "Lato", "Helvetica Neue", "Helvetica", Arial;
+        }
+
+        h1 {
+            font-family: "Lato", "Helvetica Neue", "Helvetica", Arial;
+            font-weight: normal;
+            text-rendering: optimizeLegibility;
+            line-height: 1.4;
+            margin-bottom: 14px;
+            margin-top: 14px;
+        }
+
+        h4 {
+            font-size: 20px;
+            font-weight: normal;
+            font-family: "Lato", "Helvetica Neue", "Helvetica", Arial;
+            line-height: 1.4;
+        }
+
+        .monitor {
+            margin: 0 auto;
+            float: none;
+            overflow: auto;
+            padding: 0;
+            font-size: 14px;
+            direction: ltr;
+            position: relative;
+        }
+
+        .monitor-screen {
+            background-color: #282828;
+            padding: 15px;
+            position: relative;
+        }
+
+        .monitor-inside {
+            margin-top: 15px;
+            text-align: center;
+            color: white;
+        }
+
+            .monitor-inside h3 {
+                font-weight: normal;
+                font-size: 18px;
+                margin-top: 14px;
+                margin-bottom: 30px;
+            }
+
+        .copy h3 {
+            font-weight: normal;
+            margin-top: 30px;
+            opacity: 0.5;
+            text-align: center;
+            font-size: 18px;
+        }
+
+
+        .language-list {
+            width: 80%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .icon-list a {
+            display: block;
+            float: left;
+            color: #b1361e;
+            width: 22%;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            text-decoration: none;
+            position: relative;
+            top: 1px;
+            text-align: center;
+        }
+
+        .icon-container {
+            border-radius: 4px;
+            width: 100%;
+            background: rgba(0,0,0,0.4);
+            height: 36px;
+            overflow: hidden;
+            text-align: center;
+            margin-right: 0;
+            padding: 7px;
+        }
+
+        .ico-name {
+            position: relative;
+            top: -3px;
+        }
+
+        .icon-container img {
+            position: relative;
+            top: 1px;
+        }
+
+        .second-row-text {
+            padding: 15px 0;
+            color: #7c7c7c;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .heading {
+            color: #5e5e5e;
+            display: inline-block;
+            font-size: 20px;
+            margin-right: 30px;
+            margin-top: 14px;
+            line-height: 1.4;
+            margin-bottom: 14px;
+        }
+
+        .right-row {
+            display: inline-block;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .small-icons {
+            display: inline-block;
+            width: 20px;
+            margin-right: 30px;
+        }
+
+            .small-icons img {
+                width: 20px;
+                height: 20px;
+                margin-right: 30px;
+            }
+
+        .fine-print {
+            font-size: 75%;
+        }
+
+        .copy-row {
+            overflow: auto;
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            direction: ltr;
+        }
+
+        .alt-row {
+            background-color: #f3f3f3;
+            border-top: 1px solid #ebebeb;
+            border-bottom: 1px solid #ebebeb;
+        }
+
+        .row-inner {
+            min-height: 320px;
+            width: 100%;
+            max-width: 880px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .copy-image-small is-absolute img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .copy-image-small {
+            text-align: center;
+            margin: 0 auto;
+            padding-top: 20px;
+            width: 100%;
+            height: 250px;
+        }
+
+        .copy-image-large {
+            vertical-align: middle;
+            width: 500px;
+        }
+
+        .copy-image-small img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .copy-image-large img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .alt-row .copy-image-large {
+            width: 380px;
+        }
+
+        .copy-words {
+            vertical-align: middle;
+            overflow: auto;
+        }
+
+            .copy-words h1 {
+                color: #363636;
+                font-size: 34px;
+            }
+
+            .copy-words p {
+                color: #404040;
+                display: inline-block;
+                font-size: 20px;
+                max-width: 19em;
+                margin-top: 0;
+            }
+
+        #test {
+            padding-bottom: 2em;
+            text-align: center;
+        }
+
+        .tw {
+            color: #404040;
+            background-color: white;
+            border-radius: 4px;
+            border-bottom: 4px solid #e0e0e0;
+            margin: 0 auto 6em;
+            position: relative;
+            padding: 16px;
+            width: 94%;
+            text-align: left;
+        }
+
+            .tw span {
+                font-size: 1.4em;
+                line-height: 1.5em;
+            }
+
+            .tw .author-info {
+                width: 100%;
+                margin-top: 1.6em;
+            }
+
+            .tw .author-pic {
+                width: 48px;
+                border-radius: 100px;
+                overflow: hidden;
+                float: left;
+                margin-right: 1em;
+            }
+
+                .tw .author-pic img {
+                    display: block;
+                    max-width: 100%;
+                    height: auto;
+                }
+
+            .tw .author-name {
+                line-height: 1em;
+                font-weight: bold;
+            }
+
+        .tw-link {
+            color: #b45050;
+            font-size: 1.4em;
+        }
+
+        .btn {
+            color: white;
+            padding: 15px 20px;
+            margin-top: 30px;
+            background-color: #cf4b32;
+            border-color: #bb432c;
+            width: auto;
+            display: inline-block;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 1;
+            position: relative;
+            text-align: center;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+            .btn.join-us {
+                font-size: 18px;
+                background-color: #bb432c;
+                color: #131414;
+                border-color: #bb432c;
+                margin: 30px;
+            }
+
+        #qualified .row-inner {
+            min-height: 0;
+        }
+
+        #qualified .copy-text {
+            vertical-align: middle;
+            overflow: auto;
+            padding: 15px 30px;
+        }
+
+        #qualified .copy-row.features .copy-text img {
+            max-height: 1em;
+            max-width: 320px;
+        }
+
+        #qualified p {
+            font-size: 16px;
+        }
+
+        #qualified .copy-row.features {
+            margin-bottom: 30px;
+        }
+
+        #qualified .btn {
+            color: white;
+            text-transform: uppercase;
+            font-size: 16px;
+            padding: 7px;
+            margin-top: 0;
+        }
+
+        #qualified .learn-more {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            padding: 0.75em;
+            width: auto;
+            margin-bottom: 10px;
+            text-align: center;
+            color: black;
+        }
+
+            footer div {
+                display: inline-block;
+                margin-right: 30px;
+            }
+
+            footer a {
+                display: inline-block;
+                color: #b1361e;
+                margin-right: 30px;
+            }
+
+
+        @media screen and (max-width: 1123px) {
+            .first {
+                width: 100%;
+                text-align: center;
+                padding: 0;
+                float: left;
+                display: block;
+            }
+
+            .header-columns {
+                width: 100%;
+                margin: 2em 0 2em;
+                float: none;
+                text-align: center;
+            }
+
+
+
+            .img-right {
+                right: -126px;
+            }
+
+            h4 {
+                margin-top: 0;
+                margin-bottom: 14px;
+            }
+
+            .heading {
+                font-size: 23px;
+                display: block;
+                margin: 0 auto 0.3em;
+            }
+
+            .right-row {
+                display: block;
+                margin: 0 auto;
+                width: 80%;
+                overflow: auto;
+            }
+
+            .small-icons {
+                width: 33.33%;
+                float: left;
+                margin-right: 0;
+            }
+        }
+
+        @media screen and (max-width:926px) {
+            .copy .copy-words {
+                padding: 0 1em;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+
+            .first {
+                width: auto;
+                float: none;
+                text-align: center;
+            }
+
+            .img-left {
+                opacity: 0.1;
+            }
+
+            .img-right {
+                opacity: 0.1;
+            }
+
+            .paper {
+                height: 220px;
+            }
+
+            .header-columns {
+                margin: 1em 0 1em;
+            }
+
+
+
+            h1.achieve {
+                font-size: 28px;
+                margin-top: 14px;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+
+            h4 {
+                display: block;
+                max-width: 340px;
+                margin: 0 auto;
+                margin-bottom: 14px;
+            }
+
+            .monitor-screen {
+                background-color: #282828;
+                width: 100%;
+                padding-bottom: 15px;
+                position: relative;
+                height: 355px;
+            }
+
+            .copy-image-large {
+                display: none;
+            }
+
+            .copy-words {
+                text-align: center;
+                padding-bottom: 1em;
+                opacity: 0.99;
+                background-image: -webkit-linear-gradient(rgba(253,253,245,0.98) 0, #fdfdf5 100%);
+                background-image: -moz-linear-gradient(rgba(253,253,245,0.98) 0, #fdfdf5 100%);
+                background-image: -ms-linear-gradient(rgba(253,253,245,0.98) 0, #fdfdf5 100%);
+                background-image: -o-linear-gradient(rgba(253,253,245,0.98) 0, #fdfdf5 100%);
+                background-image: linear-gradient(rgba(253,253,245,0.98) 0%,#fdfdf5 100%);
+            }
+
+                .copy-words p {
+                    color: #404040;
+                    display: inline-block;
+                    font-size: 20px;
+                    max-width: 19em;
+                }
+
+            .tw .author-info {
+                position: absolute;
+                bottom: -75px;
+                padding-left: 26px;
+                font-size: 0.8em;
+            }
+
+            #qualified .copy-text {
+                text-align: center;
+                padding: 0 1em 1em;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .first {
+                margin-bottom: 30px;
+            }
+
+            .monitor {
+                background: url('Landing pics/monitor.png') 50% no-repeat;
+                height: 556px;
+                width: 703px;
+            }
+
+            .monitor-screen {
+                margin: 30px auto 27px;
+                width: 646px;
+                height: 375px;
+                padding-bottom: 0;
+            }
+
+            .row-inner {
+                display: table;
+            }
+
+            .copy-image-small {
+                display: none;
+            }
+
+            .copy-image-large {
+                display: table-cell;
+            }
+
+            .copy-words {
+                display: table-cell;
+                padding: 0 1em 0 0;
+            }
+
+            #test h1 {
+                margin: 1em auto;
+                color: #404040;
+                font-size: 34px;
+            }
+
+            .tw {
+                width: 47%;
+                min-height: 170px;
+                float: left;
+                margin-bottom: 2em;
+            }
+
+                .tw:nth-child(odd) {
+                    clear: both;
+                }
+
+                .tw:nth-child(even) {
+                    margin-left: 6%;
+                }
+
+                .tw:nth-child(n+3) {
+                    margin-top: 2em;
+                }
+
+                .tw span {
+                    min-height: 2.5em;
+                }
+
+                .tw .author-name {
+                    font-weight: normal;
+                    margin-bottom: 0.2em;
+                }
+
+            #qualified .copy-text:first-child {
+                padding-left: 0;
+            }
+
+            #qualified .copy-text {
+                display: table-cell;
+                width: 50%;
+                padding: 0 1em;
+            }
+
+                #qualified .copy-text:last-child {
+                    padding-right: 0;
+                }
+
+            footer {
+                margin-top: 60px;
+            }
+        }
+
+        @media screen and (min-width: 1124px) {
+            .first {
+                height: 624px;
+            }
+
+            .achieve, h4 {
+                display: block;
+                max-width: 340px;
+            }
+
+            .achieve {
+                margin-bottom: 0.4em;
+            }
+
+            h4 {
+                margin: 0 auto;
+            }
+
+            .monitor {
+                position: absolute;
+                width: calc((38% - 330px) / 2 + 60%);
+                left: calc((38% - 330px) / 2 + 330px);
+                top: 68px;
+            }
+
+            .second-row-text {
+                padding: 20px 0;
+            }
+        }
+
+        @media screen and (min-width: 1279px) {
+            #qualified .copy-text {
+                padding: 0 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <div class="right_header">
+            <a href="#">For Companies</a>
+            <a href="#">For Educators</a>
+            <a href="#">Log In</a>
+            <a href="#">Sign Up</a>
+
+        </div>
+    </header>
+    <main>
+        <section class="first">
+            <div class="paper">
+                <div class="img-left"></div>
+
+                <div class="img-right"></div>
+            </div>
+            <div class="header-columns">
+                <h1 class="achieve">
+                    Achieve mastery through challenge
+                </h1>
+                <h4>
+                    Improve your skills by training with others on real code challenges
+                </h4>
+                <a class="btn" href="#">Sign up</a>
+            </div>
+            <div class="monitor">
+                <div class="monitor-screen">
+                    <div class="monitor-inside">
+                        <h3>
+                            To join you must first prove your skills.<br />
+                            Choose your language to begin...
+                        </h3>
+                        <div class="language-list">
+                            <div class="icon-list">
+                                <a href="#" title="clojure">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/Clojure_logo.svg.png" style="width:18px;" />
+                                        <b class="ico-name">Clojure</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="c">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/c-programming.png" style="width:20px;" />
+                                        <b class="ico-name">C</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="c++">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/c1-programming.png" style="width:20px;" />
+                                        <b class="ico-name">C++</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="c#">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/c2.png" style="width:18px;" />
+                                        <b class="ico-name">C#</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="crystal">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/crystal-2.png" style="width:20px;" />
+                                        <b class="ico-name">Crystal</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="dart">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/dart.png" style="width:18px;" />
+                                        <b class="ico-name">Dart</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="elixir">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/elixir.png" style="width:20px;" />
+                                        <b class="ico-name">Elixir</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="f#">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/f-2prog.jpg" style="width:18px;" />
+                                        <b class="ico-name" style="top:-2px;">F#</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="go">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/golang-color-icon2.png" style="width:18px;" />
+                                        <b class="ico-name">Go</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="haskell">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/haskell.png" style="width:18px;" />
+                                        <b class="ico-name">Haskell</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="java">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/java.jpg" style="width:18px;" />
+                                        <b class="ico-name">Java</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="js">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/javascript-512.png" style="width:22px;" />
+                                        <b class="ico-name" style="font-size:11px; top:-5px;">JavaScript</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="php">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/php.png" style="width:22px;" />
+                                        <b class="ico-name">PHP</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="python">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/python.png" style="width:20px;" />
+                                        <b class="ico-name">Python</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="ruby">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/ruby.png" style="width:18px;" />
+                                        <b class="ico-name">Ruby</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="rust">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/rust.jpg" style="width:18px;" />
+                                        <b class="ico-name">Rust</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="shell">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/shell2.png" style="width:20px;" />
+                                        <b class="ico-name">Shell</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="sql">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/sql3.png" style="width:20px;" />
+                                        <b class="ico-name">SQL</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="swift">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/Swift.png" style="width:20px;" />
+                                        <b class="ico-name">Swift</b>
+                                    </div>
+                                </a>
+                                <a href="#" title="typescript">
+                                    <div class="icon-container">
+                                        <img src="Landing pics/ico/ts.png" style="width:18px;" />
+                                        <b class="ico-name">TypeScript</b>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="second-row-text alt-row">
+            <h1 class="heading">Additional Languages:</h1>
+            <div class="right-row">
+                <div class="small-icons">
+                    <img src="Landing pics/ico/objc.png" title="Objective-C" style="width:20px; height:20px;" />
+                </div>
+                <div class="small-icons">
+                    <img src="Landing pics/ico/lua.png" title="Lua" />
+                </div>
+                <div class="small-icons">
+                    <img src="Landing pics/ico/ocaml.jpg" title="OCaml" />
+                </div>
+                <div class="small-icons">
+                    <img src="Landing pics/ico/scala.png" title="Scala" />
+                </div>
+                <div class="small-icons">
+                    <img src="Landing pics/ico/kotlin2.png" title="Kotlin" />
+                </div>
+                <div class="small-icons">
+                    <img src="Landing pics/ico/groovy.png" title="Groovy" />
+                </div>
+                <div class="small-icons">
+                    <img src="Landing pics/ico/ethereum2.png" title="Ethereum" />
+                </div>
+                <div class="small-icons">
+                    <img src="Landing pics/ico/solidity.jpg" title="Solidity" />
+                </div>
+                <div class="small-icons">
+                    <img src="Landing pics/ico/erlang.png" title="Erlang" />
+                </div>
+                <div class="small-icons">
+                    <img src="Landing pics/ico/R_logo.png" title="R" />
+                </div>
+                <div class="small-icons">
+                    <img src="Landing pics/ico/Nim-logo.png" title="Nim" />
+                </div>
+                <div class="small-icons">
+                    <img src="Landing pics/ico/brain1.png" title="BF" />
+                </div>
+            </div>
+            <div class="fine-print">
+                *These languages are currently in beta. Once you enlist you will have an opportunity to train with them.
+            </div>
+        </section>
+        <section class="copy">
+            <div class="copy-row">
+                <div class="row-inner">
+                    <div class="copy-image-small is-absolute">
+                        <img src="Landing pics/copy-skills.png" />
+                    </div>
+                    <div class="copy-image-large">
+                        <img src="Landing pics/copy-skills.png" />
+                    </div>
+                    <div class="copy-words">
+                        <h1>Sharpen your skills</h1>
+                        <p>
+                            Challenge yourself on kata, created by the
+                            community to strengthen different skills.
+                            Master your current language of choice,
+                            or expand your understanding of a new one.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-row alt-row">
+                <div class="row-inner">
+                    <div class="copy-image-small">
+                        <img src="Landing pics/copy-train.png" />
+                    </div>
+                    <div class="copy-words">
+                        <h1>Train on kata</h1>
+                        <p>
+                            Solve the kata with your coding style
+                            right in the browser and use test cases (TDD)
+                            to check it as you progress. Retrain with new,
+                            creative, and optimized approaches.
+                        </p>
+                    </div>
+                    <div class="copy-image-large">
+                        <img src="Landing pics/copy-train.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="copy-row">
+                <div class="row-inner">
+                    <div class="copy-image-small">
+                        <img src="Landing pics/copy-rank.png" />
+                    </div>
+                    <div class="copy-image-large">
+                        <img src="Landing pics/copy-rank.png" />
+                    </div>
+                    <div class="copy-words">
+                        <h1>Earn ranks and honor</h1>
+                        <p>
+                            Kata are ranked to approximate difficulty.
+                            As you complete higher ranked kata,
+                            you progress through the ranks so we can
+                            match you with relevant challenges.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-row alt-row">
+                <div class="row-inner">
+                    <div class="copy-image-small">
+                        <img src="Landing pics/copy-wisdom.png" />
+                    </div>
+                    <div class="copy-words">
+                        <h1>Gain collaborative wisdom</h1>
+                        <p>
+                            Compare your solution with others
+                            after each kata for greater understanding.
+                            Discuss the kata, best practices, and
+                            innovative techniques with the community.
+                        </p>
+                    </div>
+                    <div class="copy-image-large">
+                        <img src="Landing pics/copy-wisdom.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="copy-row">
+                <div class="row-inner">
+                    <div class="copy-image-small">
+                        <img src="Landing pics/copy-create.png" />
+                    </div>
+                    <div class="copy-image-large">
+                        <img src="Landing pics/copy-create.png" />
+                    </div>
+                    <div class="copy-words">
+                        <h1>Create your own kata</h1>
+                        <p>
+                            Author kata that focus on your interests and
+                            train specific skillsets. Challenge the community
+                            with your insight and code understanding.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="alt-row" id="test">
+            <h1>Community love</h1>
+            <div class="row-inner">
+                <div class="tw">
+                    <span>"I swear, @codewars is better than college"</span>
+                    <div class="author-info">
+                        <div class="author-pic">
+                            <img src="Landing pics/1.png" />
+                        </div>
+                        <div class="author-name">Martin Genev</div>
+                        <a class="tw-link" href="https://twitter.com/cyberseer/status/421412957168226304">@cyberseer</a>
+                    </div>
+                </div>
+                <div class="tw">
+                    <span>"Perfect Execution Codewars"</span>
+                    <div class="author-info">
+                        <div class="author-pic">
+                            <img src="Landing pics/2.jpeg" />
+                        </div>
+                        <div class="author-name">Kevin Granger</div>
+                        <a class="tw-link" href="https://twitter.com/Kevin_Granger">@Kevin_Granger</a>
+                    </div>
+                </div>
+                <div class="tw">
+                    <span>"I forgot to eat dinner, because I was on @codewars. This is addictive"</span>
+                    <div class="author-info">
+                        <div class="author-pic">
+                            <img src="Landing pics/3.jpg" />
+                        </div>
+                        <div class="author-name">Raf Szalansky</div>
+                        <a class="tw-link" href="https://twitter.com/szalansky?protected_redirect=true">@szalansky</a>
+                    </div>
+                </div>
+                <div class="tw">
+                    <span>"@codewars. Extremely well done and an excellent example of mastery learning"</span>
+                    <div class="author-info">
+                        <div class="author-pic">
+                            <img src="Landing pics/4.jpg" />
+                        </div>
+                        <div class="author-name">Ahmed Omran</div>
+                        <a class="tw-link" href="https://twitter.com/this_ahmed/status/399580891673939968">@this_ahmed</a>
+                    </div>
+                </div>
+
+                <a class="btn join-us" href="#">Join us</a>
+            </div>
+        </section>
+        <section class="copy" id="qualified">
+            <h3>Brought to you by</h3>
+            <div class="copy-row">
+                <div class="row-inner">
+                    <div class="copy-text">
+                        <h1>
+                            <a href="https://www.qualified.io/?utm_source=codewars&utm_campaign=landing">
+                                <img src="Landing pics/qualified-logo.svg" style="max-width: 320px;" />
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="copy-text">
+                        <p>
+                            Accelerate your technical hiring.
+                            <br />
+                            Instant setup. Intuitive testing. Real results.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-row features">
+                <div class="row-inner">
+                    <div class="copy-text">
+                        <h2>
+                            <a href="https://www.qualified.io/assessments?utm_source=codewars&utm_campaign=landing">
+                                <img src="Landing pics/assess-gray.svg" />
+                            </a>
+                        </h2>
+                        <p>Identify top candidates with automated candidate testing.</p>
+                    </div>
+                    <div class="copy-text">
+                        <h2>
+                            <a href="https://www.qualified.io/interact">
+                                <img src="Landing pics/interact-gray.svg" />
+                            </a>
+                        </h2>
+                        <p>Phone screen with collaborative coding interviews</p>
+                    </div>
+                </div>
+            </div>
+            <div class="learn-more">
+                <a class="btn" href="https://www.qualified.io/?utm_source=codewars&utm_campaign=landing">Learn More</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="copyright">© 2019 Codewars</div>
+        <div class="lower-links">
+            <a href="https://www.codewars.com/about">About</a>
+            <a href="https://dev.codewars.com/">API</a>
+            <a href="https://medium.com/@Codewars">Blog</a>
+            <a href="https://www.codewars.com/about/privacy">Privacy</a>
+            <a href="https://www.codewars.com/about/terms-of-service">Terms</a>
+            <a href="mailto:info@codewars.com">Contact</a>
+        </div>
+    </footer>
+
+</body>
+</html>
